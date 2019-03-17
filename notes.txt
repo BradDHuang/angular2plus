@@ -2,8 +2,13 @@
 
 ng serve --host $IP --port $PORT --public $C9_HOSTNAME
 
+npm install -g @angular/cli
+
+nvm i v10.15.3
 ng serve --host 0.0.0.0 --port 8080 --disableHostCheck
 
 https://angular2plus-happitt.c9users.io/
 
+ng generate component servers
+ng g c servers
 
