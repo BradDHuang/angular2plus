@@ -12,3 +12,17 @@ https://angular2plus-happitt.c9users.io/
 ng generate component servers
 ng g c servers 
 ng g c servers --spec false
+
+Lifecycle Hooks:
+
+    ngOnChanges
+    ngOnInit
+    ngDoCheck
+    
+    ngAfterContentInit
+    ngAfterContentChecked
+    
+    ngAfterViewInit
+    ngAfterViewChecked
+    
+    ngOnDestroy
