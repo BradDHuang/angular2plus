@@ -24,6 +24,8 @@ export class ServerElementComponent implements
   DoCheck, 
   AfterContentInit,
   AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
   OnDestroy {
   @Input('srvElement') element: {
     type: string,
