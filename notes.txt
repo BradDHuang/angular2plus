@@ -39,3 +39,5 @@ Structural D.
     Look like a normal HTML Attribute
     but have a leading *
     Affect a whole area in the DOM
+
+ng g d directiveName
