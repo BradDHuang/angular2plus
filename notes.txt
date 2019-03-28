@@ -1,5 +1,5 @@
 
-
+ng new appname
 ng serve --host $IP --port $PORT --public $C9_HOSTNAME
 
 npm install -g @angular/cli
@@ -26,3 +26,16 @@ Lifecycle Hooks:
     ngAfterViewChecked
     
     ngOnDestroy
+
+Directives:
+
+Attribute Directives vs. Structural Directives
+
+Attribute D.
+    Look like a normal HTML Attribute
+    Only affect / change the ele. they are added to
+
+Structural D.
+    Look like a normal HTML Attribute
+    but have a leading *
+    Affect a whole area in the DOM
