@@ -16,7 +16,17 @@
             {{ num }}
           </li>
         </div>
-        <div *ngIf="!onlyOdd">
+        <!--<div *ngIf="!onlyOdd">-->
+        <!--  <li-->
+        <!--    class="list-group-item"-->
+        <!--    [ngClass]="{odd: num % 2 !== 0}"-->
+        <!--    [ngStyle]="{backgroundColor: num % 2 !== 0 ? 'yellow' : 'transparent'}"-->
+        <!--    *ngFor="let num of evenNums"-->
+        <!--  >-->
+        <!--    {{ num }}-->
+        <!--  </li>-->
+        <!--</div>-->
+        <div *appUnless="onlyOdd">
           <li
             class="list-group-item"
             [ngClass]="{odd: num % 2 !== 0}"
@@ -28,11 +38,18 @@
         </div>
       </ul>
       <!--<ng-template [ngIf]="onlyOdd">-->
+      <!--How Structural Directives work behind the Scenes-->
       <!--</ng-template>-->
       <p appBasicHighlight>Style with basic highlight directive</p>
       <p [appBetterHighlight]="'yellow'"
         [defaultColor]="'pink'"
       >Style with better highlight directive</p>
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="5">Val: 5</p>
+        <p *ngSwitchCase="50">Val: 50</p>
+        <p *ngSwitchCase="500">Val: 500</p>
+        <p *ngSwitchDefault>Val: Default</p>
+      </div>
     </div>
   </div>
 </div>
