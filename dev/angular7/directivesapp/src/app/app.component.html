@@ -30,7 +30,9 @@
       <!--<ng-template [ngIf]="onlyOdd">-->
       <!--</ng-template>-->
       <p appBasicHighlight>Style with basic highlight directive</p>
-      <p appBetterHighlight>Style with better highlight directive</p>
+      <p [appBetterHighlight]="'yellow'"
+        [defaultColor]="'pink'"
+      >Style with better highlight directive</p>
     </div>
   </div>
 </div>
