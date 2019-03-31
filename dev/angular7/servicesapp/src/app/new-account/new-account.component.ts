@@ -8,7 +8,7 @@ import { AccountsService } from '../accounts.service';
   templateUrl: './new-account.component.html',
   styleUrls: ['./new-account.component.css'],
   // providers: [LoggingService, AccountsService]
-  providers: [LoggingService]
+  // providers: [LoggingService]
 })
 export class NewAccountComponent {
   // @Output() accountAdded = new EventEmitter<{name: string, status: string}>();
@@ -27,6 +27,6 @@ export class NewAccountComponent {
     // const service = new LoggingService();
     // service.logStatusChange(accountStatus);
     
-    this.loggingService.logStatusChange(accountStatus);
+    // this.loggingService.logStatusChange(accountStatus);
   }
 }
