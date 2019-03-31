@@ -46,3 +46,12 @@ Hierarchical Injector
     AppModule: App-wide
     AppComponent: all Components (but Not for other Services)
     Any other Component: the Component and All its child Component(s)
+
+// Angular 6+
+@Injectable({ providedIn: 'root' })
+export class MyService { ... }
+    The "new syntax" does offer one advantage though: 
+    Services can be loaded lazily by Angular (behind the scenes) 
+        and redundant code can be removed automatically. 
+    This can lead to a better performance 
+        and loading speed.
