@@ -41,3 +41,8 @@ Structural D.
     Affect a whole area in the DOM
 
 ng g d directiveName
+
+Hierarchical Injector
+    AppModule: App-wide
+    AppComponent: all Components (but Not for other Services)
+    Any other Component: the Component and All its child Component(s)
