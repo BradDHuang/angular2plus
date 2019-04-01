@@ -1,7 +1,10 @@
-import { EventEmitter } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
 
+import { ShoppingListService } from '../shopping-list/shopping-list.service';
+
+@Injectable()
 export class RecipeService {
     private recipes: Recipe[] = [
         new Recipe('Salsa', 'Strawberry salsa', 'https://cookieandkate.com/images/2017/03/strawberry-salsa-recipe.jpg',
@@ -20,8 +23,15 @@ export class RecipeService {
     
     recipeSelected = new EventEmitter<Recipe>();
     
+    constructor(private shoppingListService: ShoppingListService) {}
+    
     getRecipes() {
         // return this.recipes;
         return this.recipes.slice(); // A new array.
     }
+    
+    addIngToSL(ingredients: Ingredient[]) {
+        this.shoppingListService.addIngredientsFromRecipe(ingredients);
+    }
+    
 }

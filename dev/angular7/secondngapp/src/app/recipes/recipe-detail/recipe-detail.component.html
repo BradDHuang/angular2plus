@@ -26,7 +26,14 @@
                 Manage Recipe <span class='caret'></span>
             </button>
             <ul class='dropdown-menu'>
-                <li><a href='#'>Add</a></li>
+                <li>
+                    <a 
+                        style="cursor: pointer"
+                        (click)="onAddToShoppingList()"
+                    >
+                        Add to Shopping List
+                    </a>
+                </li>
                 <li><a href='#'>Edit</a></li>
                 <li><a href='#'>Delete</a></li>
             </ul>
