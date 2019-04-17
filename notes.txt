@@ -77,3 +77,6 @@ Observer:
     Handle Data;
     Handle Error;
     Handle Completion.
+
+https://angular.io/api/forms/Validators
+https://angular.io/api?type=directive
