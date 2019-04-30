@@ -10,9 +10,14 @@ export class ShoppingListService {
     
     // ingredientsChanged = new EventEmitter<Ingredient[]>();
     ingredientsChanged = new Subject<Ingredient[]>();
+    startedEditing = new Subject<number>();
     
     getIngredients() {
         return this.ingredients.slice();
+    }
+    
+    getIngredient(index: number) {
+        return this.ingredients[index];
     }
     
     addIngredient(ing: Ingredient) {
