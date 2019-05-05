@@ -1,13 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
-      <!--<app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account>-->
-      <app-new-account></app-new-account>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <input type="text" #serverName>
+      <button class="btn btn-primary" (click)="onAddServer(serverName.value)">Add Server</button>
       <hr>
-      <app-account
-        *ngFor="let acc of accounts; let i = index"
-        [account]="acc"
-        [id]="i"></app-account>
+      <ul class="list-group" *ngFor="let server of servers">
+        <li class="list-group-item">{{ server.name }} (ID: {{ server.id }})</li>
+      </ul>
     </div>
   </div>
 </div>

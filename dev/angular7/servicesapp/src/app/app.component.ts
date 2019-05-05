@@ -1,28 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { AccountsService } from './accounts.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-  // providers: [AccountsService]
 })
-export class AppComponent implements OnInit {
-  accounts: {name: string, status: string}[] = [];
-  
-  constructor(private accountsService: AccountsService) {}
-  
-  ngOnInit() {
-    this.accounts = this.accountsService.accounts;
+export class AppComponent {
+  servers = [
+    {
+      name: 'Testserver',
+      capacity: 10,
+      id: this.generateId()
+    },
+    {
+      name: 'Liveserver',
+      capacity: 100,
+      id: this.generateId()
+    }
+  ];
+  onAddServer(name: string) {
+    this.servers.push({
+      name: name,
+      capacity: 50,
+      id: this.generateId()
+    });
   }
-  
-/*
-  onAccountAdded(newAccount: {name: string, status: string}) {
-    this.accounts.push(newAccount);
+  private generateId() {
+    return Math.round(Math.random() * 10000);
   }
-
-  onStatusChanged(updateInfo: {id: number, newStatus: string}) {
-    this.accounts[updateInfo.id].status = updateInfo.newStatus;
-  }
-*/
 }
