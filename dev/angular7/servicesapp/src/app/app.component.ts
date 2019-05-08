@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Response } from '@angular/http';
 import { ServerService } from './server.service';
 
 @Component({
@@ -34,6 +35,17 @@ export class AppComponent {
     this.serverService.storeServers(this.servers)
       .subscribe(
         (res) => console.log(res),
+        (err) => console.log(err)
+      );
+  }
+  
+  onGet() {
+    this.serverService.getServers()
+      .subscribe(
+        (res: Response) => {
+          const data = res.json();
+          console.log(data);
+        },
         (err) => console.log(err)
       );
   }
