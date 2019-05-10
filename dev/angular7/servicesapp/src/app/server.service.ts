@@ -19,7 +19,7 @@ export class ServerService {
     }
     
     getServers() {
-        return this.http.get('https://ng-http-aaee8.firebaseio.com/data')
+        return this.http.get('https://ng-http-aaee8.firebaseio.com/data.json')
             .pipe(map(
                 (res: Response) => {
                     const data = res.json();
@@ -34,6 +34,13 @@ export class ServerService {
                     // console.log(err);
                     return throwError('Something went wrong.');
                 }
+            ));
+    }
+    
+    getTest() {
+        return this.http.get('https://ng-http-aaee8.firebaseio.com/test.json')
+            .pipe(map(
+                (res: Response) => { return res.json(); }
             ));
     }
 }
