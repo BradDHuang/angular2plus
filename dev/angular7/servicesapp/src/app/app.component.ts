@@ -46,10 +46,11 @@ export class AppComponent {
         //   const data = res.json();
         //   console.log(data);
         // },
-        (data: any) => {
-          console.log(data); // servers
+        (data: any[]) => {
+          // console.log(data); // servers
+          this.servers = data;
         },
-        (err) => console.log(err)
+        (err) => console.log('ERR: ' + err)
       );
   }
   
