@@ -4,3 +4,6 @@ https://angular.io/api/core/Renderer2
 
 Pipes
 https://angular.io/api?query=pipe
+
+JSON Web Tokens
+https://jwt.io/introduction/
